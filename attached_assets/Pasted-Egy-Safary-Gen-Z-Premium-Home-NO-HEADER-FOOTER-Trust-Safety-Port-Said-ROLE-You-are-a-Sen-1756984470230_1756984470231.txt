@@ -1,0 +1,217 @@
+Egy Safary — Gen-Z Premium Home (NO HEADER/FOOTER) | Trust × Safety × Port Said
+
+ROLE: You are a Senior Product Designer + UI Motion Specialist.
+GOAL: Build a jaw-dropping, Gen-Z inspired homepage (body only) for Egy Safary. It must look premium, vibrant, trustworthy, and energetic. No header or footer — focus on Hero → Planner → Explore → Packages → Testimonials → Ads → Partner Logos strip.
+
+1) BRAND VISUAL SYSTEM
+
+Palette (Gen-Z Blues + Accents):
+
+primary-700 #0B2A3B (Deep Port Navy)
+
+primary-600 #0F4FDB (Canal Blue)
+
+primary-500 #1464F4 (Signal Azure)
+
+primary-300 #4CC9F0 (Sky Ripple)
+
+accent-gold #C9A23A (Luxury highlights)
+
+accent-teal #00D2DF (youth pop)
+
+accent-lilac #B388FF (playful gradients)
+
+accent-pink #EC4899 (Gen-Z energy, sparing)
+
+neutrals: 900 #0E1116, 700 #2A2F37, 500 #6B7280, 300 #D1D5DB, 100 #F3F6FB
+
+Gradients:
+
+g-primary: #1464F4 → #00D2DF
+
+g-dusk: #0B2A3B → #1464F4 (+ subtle noise 12%)
+
+g-pop: #B388FF → #4CC9F0 (badges/pills only)
+
+Glass & Shadows:
+
+Card shadow y=12 blur=24 opacity 12%
+
+Glass: rgba(11,42,59,0.45), blur 14, border rgba(255,255,255,0.15)
+
+2) TYPOGRAPHY & ICONS
+
+Headlines: Plus Jakarta Sans / Sora bold (700–800).
+
+Body: Inter 400–600. Arabic fallback: Cairo / IBM Plex Arabic (RTL ready).
+
+Scale desktop: H1 64/72, H2 44/52, H3 28/36, Body 16/26, Small 14/22.
+
+Icons: Lucide stroke 2px. Consistent 24px desktop, 20px mobile.
+
+Icon map → Lock/Shield=Safety, Sparkles/Compass=Authentic, Rocket/Calendar=Planning, Lifebuoy/Headset=Support, Utensils=Restaurants, Shopping-bag=Shops, Landmark=Attractions, Check-circle=Verified.
+
+3) MICRO-INTERACTIONS
+
+Hover: elevate +2px, shadow deepen, scale 1.01, icon wiggle 3°.
+
+Buttons: gradient shift g-primary→g-pop on hover (150ms).
+
+Hero BG: slow parallax; gradient shift cycle (20s).
+
+Planner: progress bar fills step-by-step.
+
+“Book Now”: trigger confetti (Lottie).
+
+Reveal on scroll: stagger 60ms fade-up.
+
+Dark mode toggle (optional): invert palette → navy deeper, accents pop.
+
+4) ACCESSIBILITY
+
+Contrast AA+.
+
+Touch targets ≥44px.
+
+Reduced motion = disables parallax/confetti.
+
+RTL Arabic variant for Hero + Explore.
+
+5) HOMEPAGE SECTIONS (Body Only)
+[1] HERO — 🚀 “The Grand Welcome”
+
+Full-bleed 90vh hero.
+
+Background: b-roll video (Suez Canal, Corniche, seafood plating) + g-dusk overlay (35%). Add faint grid texture (8%).
+
+Content:
+
+Eyebrow (accent-teal): “PORT SAID / EGYPT”
+
+H1: “Egy Safary: Your Trusted Journey to Port Said’s Heart.”
+
+Sub: “Seamless Exploration, Authentic Experiences, Unforgettable Memories. Your Safety, Our Priority.”
+
+CTAs:
+• Primary (big, gradient fill g-primary→g-pop, icon rocket): Plan Your Safe Adventure (→ #planner)
+• Secondary (ghost white + compass icon): Discover Port Said (→ #explore)
+
+Trust strip (glass pill): icons shield-check “Secure”, check-circle “Verified Partners”, headset “24/7 Support”.
+
+Hero Motion: headline fade-up, CTAs pulse every 8s, trust strip chips bounce slightly on hover.
+
+[2] WHY EGY SAFARY? — 💎 “Our Commitment”
+
+2×2 grid cards with icon chips, each “Verified” micro-badge.
+
+Pillars: Safety, Authenticity, Planning, Support.
+
+BG: light blue surface with wave divider to next section.
+
+[3] PLANNER SNAP-IN — 🎯 “Quick Safe Plan”
+
+Inline wizard card (glass effect).
+
+Step 1: pick vibe (pills with icons: 🍽️ Food, 🛍️ Shopping, 🏛️ Culture, 👨‍👩‍👧 Family).
+
+Step 2: select date/time (picker).
+
+Step 3: choose package (from Section 4).
+
+Progress bar fills as you move.
+
+CTA: Build My Safe Plan → confetti burst success.
+
+[4] EXPLORE PORT SAID — 🌍 “Curated Suggestions”
+
+Section header: “Curated for You: Port Said’s Best”
+
+Sub-copy: “Dive into Port Said’s vibrant scene with our expert recommendations.”
+
+Carousels:
+
+Restaurants & Cafés (cards with seafood images, “View Menu” ghost + “Book Now” primary). Ex: Ibn Hamidou, El Borg, City Crepe, Bianca Cafe.
+
+Shopping & Local Finds (Discover Stores CTA). Ex: Golden Zone, Abu Alaa Active, Local Souvenir Markets, Top Jeans.
+
+Landmarks & Activities (Learn More CTA). Ex: Suez Canal Viewpoint, Ferial Park, Military Museum.
+
+Add rating chips ⭐ + gradient tag pills (“New”, “Editor’s Pick”).
+
+[5] FEATURED PACKAGES — 🧳 “Your Journey, Your Way”
+
+Grid of 3–4 cards with gold top bar.
+
+Example packages:
+
+VIP Voyager — from 450 EGP (Most Popular)
+
+Adventurer — from 250 EGP (Best Value)
+
+Explorer — from 200 EGP
+
+Alex Day Trip — from 399 EGP
+
+Include inclusions list, shield icon for safety, badge micro-tags.
+
+Toggle view: cards <→ comparison table.
+
+[6] TESTIMONIALS — 💬 “Voices of Our Travelers”
+
+Carousel, glass cards with blue glow.
+
+Avatar with gold ring + small flag.
+
+Sample quotes (short, 1–2 lines).
+
+Add “Verified Trip” tick badge.
+
+[7] ADS — 📢 “Exclusive Offers”
+
+Responsive row → stacked on mobile.
+
+Glass cards, subtle partner brand accent border.
+
+Examples: Hotel Stay 20% off, Crafts Discount, Seafood Feast Tonight.
+
+Tag pill: “Sponsored”.
+
+[8] PARTNER STRIP — 🤝 “Trusted By”
+
+Final reassurance row (mini, not footer).
+
+Logos of 4–6 partners (gray or white mono).
+
+Tagline: “Trusted by 30+ Verified Partners”.
+
+6) STATES, LOADING & EMPTY
+
+Loading states: skeleton shimmer for cards/carousels.
+
+Empty states: friendly card (icon + copy “No offers available right now, check back soon”).
+
+Error: glass card with warning icon + retry CTA.
+
+7) RESPONSIVE RULES
+
+Tablet: 2-up grid, H1 shrink to 48, paddings −20%.
+
+Mobile: 1-col stack, hero text centered, CTAs full-width, carousels swipe.
+
+Ads + Partner strip stack vertical.
+
+8) DELIVERABLES
+
+Desktop (1440w), Tablet (1024w), Mobile (390w) frames.
+
+All sections built as swappable components.
+
+Tokens for color, spacing, radius, motion.
+
+Prototype hero → planner flow, explore carousel swipe, package booking confetti.
+
+Provide one Dark Mode preview (Hero + Explore).
+
+Export preview thumbnails per section.
+
+🔥 Instruction: Make it feel alive, bold, premium. Hero is the showstopper (gradients + video + glowing headline + Gen-Z CTAs). Planner is playful & gamified. Explore + Packages are vibrant, scannable. Testimonials glassy & trustworthy. Ads integrated but premium. End with Partner logos for confidence.

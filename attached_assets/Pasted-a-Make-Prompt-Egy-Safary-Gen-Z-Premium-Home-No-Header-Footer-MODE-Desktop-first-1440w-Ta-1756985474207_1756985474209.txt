@@ -1,0 +1,379 @@
+a Make Prompt — Egy Safary · Gen-Z Premium Home (No Header/Footer)
+
+MODE: Desktop-first (1440w) + Tablet (1024w) + Mobile (390w).
+HARD RULE: Build body sections only — no header / no footer in any frame.
+
+0) Brand System (Gen-Z Blue, Premium & Trust)
+
+Palette
+
+Primary Blues
+#0B2A3B (primary-700 · Deep Port Navy), #0F4FDB (primary-600 · Canal Blue),
+#1464F4 (primary-500 · Signal Azure), #4CC9F0 (primary-300 · Sky Ripple)
+
+Accents
+#C9A23A (accent-gold · luxe sparingly), #00D2DF (accent-teal · tags/pills), #B388FF (accent-lilac · micro highlights)
+
+Neutrals
+#0E1116 (900), #2A2F37 (700), #6B7280 (500), #D1D5DB (300), #F3F6FB (100), #F8FBFF (surface)
+
+Gradients
+
+g-primary: 135° #1464F4 → #00D2DF
+
+g-dusk: 135° #0B2A3B → #1464F4 (+16% film grain)
+
+g-pop: 135° #B388FF → #4CC9F0 (badges only)
+
+Typography
+
+Display/Headings: Plus Jakarta Sans or Sora (700–800)
+
+Body/Meta: Inter (400–600)
+
+Arabic fallback: Cairo / IBM Plex Sans Arabic (prepare RTL styles for each text token)
+
+Scale (Desktop): H1 64/72 · H2 44/52 · H3 28/36 · Body 16/26 · Small 14/22 · Button 16/20(600)
+
+Headlines tracking −1%…−2%, WCAG AA+ contrast on light surfaces.
+
+Iconography (Lucide/Feather 2px stroke; 24px desktop / 20px mobile)
+
+Safety: shield-check / lock · Authentic: sparkles / compass · Planning: rocket / calendar / route
+
+Support: headset / lifebuoy · Categories: utensils, fish, shopping-bag, tag, landmark, binoculars, ferry
+
+Elevation & Glass
+
+Card shadow: y12 / blur24 / 12%
+
+Glass: rgba(11,42,59,0.45) + blur14 + 1px border rgba(255,255,255,0.15)
+
+Layout
+
+Grid: 12-col (1440, gutters 24, margins 80) · Tablet 8-col · Mobile 4-col
+
+Containers: 1200 (wide) · 1040 (standard) · 880 (compact)
+
+Spacing scale: 8, 12, 16, 24, 32, 48, 72
+
+No header/footer. Section rhythm alternates: clean surface ↔ blue-tinted panel.
+
+Motion
+
+Durations: 150ms / 240ms / 380ms · Ease: cubic-bezier(0.2, 0.8, 0.2, 1)
+
+On-scroll reveal: +12px Y, 60ms stagger, opacity 0→1
+
+Accessibility
+
+WCAG 2.2 AA minimum, targets ≥44px, strong focus rings (2px accent-teal), no color-only signals. RTL mirroring ready.
+
+1) HERO — Grand Welcome & Trust Builder (make it WOW)
+
+Frame: 90vh desktop, 75vh tablet, 70vh mobile.
+Background stack:
+
+Video loop (4–8s) b-roll: Suez Canal ships, Corniche, Ferial Park pergolas, seafood plating.
+
+Fallback: 3-image crossfade carousel (auto 6s).
+
+Overlay: g-dusk @ 35% + faint grid texture 8% for depth. Slow parallax on video/image layers.
+
+Content (left-aligned desktop, centered mobile)
+
+Eyebrow (caps, small, accent-teal): PORT SAID · EGYPT
+
+H1: “Egy Safary: Your Trusted Journey to Port Said’s Heart.”
+
+Sub: “Seamless Exploration, Authentic Experiences, Unforgettable Memories. Your Safety, Our Priority.”
+
+Primary CTA (large, solid, gradient): “Plan Your Safe Adventure” → anchors #planner
+
+Secondary CTA (ghost + compass icon): “Discover Port Said” → scroll to #explore
+
+Inline trust microline (small + icons): shield-check “Secure Booking” · check-circle “Verified Partners (30+)” · headset “24/7 Support”
+
+Trust Panel (glass pill above CTAs)
+
+4 mini-badges with icons: Secure Booking · Verified Partners · 24/7 Support · Live Guidance
+
+Hero Micro-interactions
+
+CTA hover: g-primary → g-pop (150ms), subtle 1.01 scale
+
+CTA focus ring: 2px accent-teal
+
+CTA soft pulse every 8s (opacity 100%→85%)
+
+Scroll cue chevron (looping, low-motion friendly)
+
+RTL variant frame with Arabic headline: “إيجي سفاري: رفيقك الآمن لقلب بورسعيد.”
+
+Surprise (Gen-Z): a tiny “Vibe Switch” (Chill / Classic / Max) changes hero overlay intensity + swaps b-roll layer order (no layout shift).
+
+2) WHY EGY SAFARY? — Our Commitment to You
+
+Layout: 2×2 responsive card grid on light blue surface with a soft wave divider bottom.
+
+Each PillarCard (component):
+
+Icon 24px · H3 · 2-line body · micro-badge Verified (accent-teal)
+
+Copy:
+
+🔒 Safety & Security — “Travel with peace of mind. All partners are rigorously vetted, and your data is protected.”
+
+✨ Authentic Experiences — “Discover the true essence of Port Said with hand-picked, unique local insights.”
+
+🚀 Effortless Planning — “From booking to exploration, our platform makes your journey smooth and stress-free.”
+
+🤝 Dedicated Support — “Our team is here for you 24/7, ensuring a worry-free and enjoyable trip.”
+
+Competitive trust labels (badges set, optional): Free Cancellation, Reserve Now · Pay Later, Instant Confirmation (visual style echoes GetYourGuide/Viator patterns without copying their UI).
+
+3) EXPLORE PORT SAID — Curated Suggestions (#explore)
+
+Header:
+
+H2: “Curated for You: Port Said’s Best”
+
+Body: “Dive into Port Said’s vibrant scene with our expert recommendations. Every suggestion is a step towards an unforgettable experience.”
+
+Three carousels (swipeable mobile; arrows desktop). Card spec 320×380, image 16:9, tags, rating dots, CTAs.
+
+3A) Culinary Delights — Restaurants & Cafés
+
+H3: “Taste Port Said: Our Top Culinary Picks”
+
+Body: “From fresh seafood to cozy cafes, savor the flavors of Port Said. Book your table instantly!”
+
+Seed cards (edit later): Ibn Hamidou — Seafood Excellence (⭐ Popular · tag Seafood), El Borg — Authentic Egyptian Cuisine (tags Seafood, Family-friendly), City Crepe — Sweet & Savory, Bianca Cafe — Riverside Charm (tag Cafe / Views).
+
+CTAs per card: View Menu (ghost) + Book Now (primary).
+
+Mini-pills: Offers Today, New, Editor’s Pick.
+
+3B) Shopping & Local Finds
+
+H3: “Shop Port Said: Unique Finds & Local Treasures”
+
+Cards: Golden Zone — Modern Shopping Hub (Mall), Abu Alaa Active — Sportswear & Casual (Local Brand), Top Jeans, Local Souvenir Markets (Handmade).
+
+CTA: Discover Stores (per card or group).
+
+3C) Landmarks & Activities
+
+H3: “Iconic Sights & Thrilling Activities”
+
+Cards: Suez Canal Viewpoint (Must-See), Ferial Park — Historic Beauty (Stroll), Military Museum — A Glimpse into History (Culture).
+
+CTA: Learn More.
+
+Surprise (Gen-Z): Live Mood Filters above carousels: Seafood, Sunset views, Budget-friendly, Family, First-time in Port Said, Cruise stop-over (toggles animate cards via smart filters).
+
+4) FEATURED TOURS & PACKAGES — Your Journey, Your Way
+
+H2: “Your Perfect Port Said Journey Awaits”
+Body: “Choose from our meticulously crafted packages, designed for every type of traveler. Experience Port Said with confidence and comfort.”
+
+PackageCards (3–4): show price chips, inclusions, tiny shield icon for Safety Protocols
+
+VIP Voyager — Premium Port Said Experience — from 450 EGP
+
+Private guide, Premium transport, Exclusive access, Discount Card
+
+Adventurer — Full Experience in Port Said — from 250 EGP
+
+5–6 landmarks w/ guide, Live assistance, Discount Card
+
+Explorer — Quick Tour of Port Said — from 200 EGP
+
+Fast highlights, Flexible timing
+
+Alex Day Trip — One Unforgettable Day — from 399 EGP
+
+Sea vibes + history + shopping
+
+Badges: Most Popular (VIP), Best Value (Adventurer).
+
+CTA per card: Book Now.
+
+Compare Toggle (desktop only): switch to table view (rows: Inclusions, Duration, Transport, Safety, Add-ons, Flex).
+
+Competitive cues (microcopy under price): Free cancellation up to 24h · Reserve now, pay later available on select experiences.
+
+5) TRUST & TESTIMONIALS — Voices of Our Travelers
+
+Slider: elegant cards with circular photo mask (blue ring), 1–2 sentence quotes.
+
+H2: “Travelers Trust Egy Safary: Hear Their Stories”
+
+Quotes (seed):
+
+“Egy Safary made our trip to Port Said seamless and incredibly safe. Highly recommend!” — Lina, UAE
+
+“The restaurant suggestions were spot on, and booking was a breeze. A truly professional service.” — Marco, Italy
+
+“Loved the quick ‘Explorer’ tour — zero stress, all highlights!” — Sara, KSA
+
+Each name shows a Verified Experience tick.
+
+Surprise (Gen-Z): When a slide reaches 90% viewport, show a tiny confetti Lottie (once per session).
+
+6) SPONSORED — Exclusive Offers from Trusted Partners
+
+Three AdCards (responsive: row → grid → stack). Labeled Sponsored (top-left), cohesive with brand.
+
+Luxury Hotel Stay in Port Said — 20% Off! → Claim Offer
+
+Exclusive Discount on Local Crafts! → Shop Now
+
+Seafood Feast Deal — Tonight Only → View Menu
+Style: glass surface on light background, partner-color border, hover tooltip “Offer by [Partner]. T&Cs apply.”
+
+7) Planner Snap-In (#planner) — Quick Start Wizard (inline)
+
+Card with 3 steps + skeleton loading state:
+
+Choose your vibe (selectable pills): Seafood & Cafes, History & Culture, Shopping, Family Day, Cruise Stop-Over (≤6h)
+
+Select date/time (date/time pickers)
+
+Pick a package (use cards from §4)
+
+Primary CTA: Build My Safe Plan → fake “planning” skeleton → success tick + tiny confetti Lottie.
+Micro-trust beneath: “Questions? We’re here 24/7.”
+
+Surprise (Local Edge): If user picks Cruise Stop-Over, show “Ship-Back Safe Window” pill: an info tooltip clarifies return-to-port buffer built into timings (inspired by shore-excursion best practices).
+
+8) Transit Live (Snap-In) — optional bonus block
+
+Small card that surfaces live internal transport tips (icons for bus/ferry/taxi). CTA: Open in Telegram (deep link placeholder).
+
+Badges: Real-time, Crowd level (beta)
+
+Copy: “Get from A→B faster with live pointers. Safe, simple, verified routes.”
+(Design only; connect to your Telegram bot later.)
+
+9) Safety Center — compact reassurance block
+
+Mini checklist with shield-check bullets:
+
+Partner vetting & ID verification
+
+Secure payments (SSL)
+
+24/7 support & incident hotline
+
+Flexible policies: free cancellation, reserve now · pay later (where applicable)
+
+Link-style CTA: Learn how we keep you safe
+
+10) Gamified “Blue Passport” (Gen-Z Surprise)
+
+Tiny strip card: “Collect stamps from places you visit.”
+
+Badges earned: Canal Watcher, Seafood Lover, Ferial Sunset, Museum Buff
+
+Progress bar + Share mini-button. (Optional toggle in design system.)
+
+Visual Content Rules
+
+Authentic Port Said imagery (Suez Canal, Corniche, Ferial Park, seafood plating, cafés, markets). Cool blue grading, warm gold speculars.
+
+Videos silent by default; mobile → image fallback.
+
+Copy tone: premium, concise, friendly; Gen-Z accents sparingly.
+
+Subtle gradients, never overwhelm readability.
+
+Components & Tokens (Design System)
+
+Buttons: Primary (gradient fill), Secondary (outline primary-500), Tertiary (text + arrow)
+
+Cards: PlaceCard / RestaurantCard / PackageCard / TestimonialCard / AdCard / SafetyCard
+
+Chips: Verified · Offer · New · Editor’s Pick · Cruise Stop-Over · Free Cancellation · Pay Later
+
+Variables:
+
+color.primary.*, color.accent.*, color.neutral.*
+
+radii: sm8 / md16 / lg24 / xl28 / pill999
+
+spacing: 8 / 12 / 16 / 24 / 32 / 48 / 72
+
+motion.duration: 150 / 240 / 380
+
+States: default / hover / focus / pressed / disabled
+
+Dark Mode (variant): deepen backgrounds; keep g-primary luminous; borders ↑ contrast.
+
+Micro-interactions (Tasteful Gen-Z Energy)
+
+Card hover: lift +2px, shadow +20%, scale 1.01, icon micro-wiggle 3°
+
+Carousel arrows: bounce-in 120ms on hover
+
+Badges: quick fade-up 120ms
+
+Focus states visible everywhere (accent-teal ring)
+
+Responsive Rules
+
+Tablet: 2-up cards, H1→48, paddings −20%
+
+Mobile: single column, gaps −25%, H1→36, hero text centered, CTAs full-width, carousels swipeable
+
+Sponsored cards stack; labels remain top-left.
+
+Localization & RTL
+
+Provide mirrored styles for Arabic (RTL) on HERO + one carousel to validate spacing.
+
+Arabic seed headline: “إيجي سفاري: رفيقك الآمن لقلب بورسعيد.”
+
+Localize numerals when RTL active.
+
+Seed Content (editable)
+
+Packages & prices: VIP Voyager — from 450 EGP; Adventurer — from 250 EGP; Explorer — from 200 EGP; Alex Day Trip — from 399 EGP.
+
+Restaurants/Cafés: Ibn Hamidou (Seafood), El Borg (Seafood), City Crepe, Bianca Cafe.
+
+Shopping: Golden Zone (Mall), Abu Alaa Active (Sportswear), Top Jeans, Local Souvenir Markets.
+
+Micro trust line: “Powered by local expertise & advanced technology · 30+ verified partners.”
+
+Deliverables
+
+One Desktop (1440w) + Tablet (1024w) + Mobile (390w) frame.
+
+Each section is a component with variants; tokens centralized.
+
+Prototype: hero CTAs, card hover, carousel swipe, planner skeleton → success.
+
+No header or footer in any frame.
+
+Export preview thumbnails per section.
+
+Why these competitive cues?
+
+Free cancellation and Reserve Now, Pay Later badges mirror what top OTAs highlight to reduce risk and boost conversion. (Reference policies & messaging styles used by GetYourGuide and Viator.) 
+GetYourGuide
++2
+GetYourGuide
++2
+Viator Agent Resource Center
+partnerhelp.viator.com
+Viator
+
+Cruise stop-over flow + return-to-port buffer aligns with shore-excursion best practices that emphasize timing guarantees for cruise passengers. 
+Condé Nast Traveler
++1
+Southern Living
+
+Seeds reflect what you already showcase on your Odoo site (Tours, Places, Restaurants, Shopping), so design can map 1:1 later. 
+EGY SAFARY
++1
