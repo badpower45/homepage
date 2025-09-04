@@ -55,7 +55,7 @@ function useSidebar() {
 
 const SidebarProvider = React.forwardRef<
   HTMLDivElement,
-  React.ComponentProps<"div"> & {
+  Omit<React.ComponentPropsWithoutRef<"div">, "onBeforeInput"> & {
     defaultOpen?: boolean
     open?: boolean
     onOpenChange?: (open: boolean) => void
@@ -407,7 +407,7 @@ SidebarSeparator.displayName = "SidebarSeparator"
 
 const SidebarContent = React.forwardRef<
   HTMLDivElement,
-  React.ComponentProps<"div">
+  Omit<React.ComponentPropsWithoutRef<"div">, "onBeforeInput">
 >(({ className, ...props }, ref) => {
   return (
     <div
@@ -425,7 +425,7 @@ SidebarContent.displayName = "SidebarContent"
 
 const SidebarGroup = React.forwardRef<
   HTMLDivElement,
-  React.ComponentProps<"div">
+  Omit<React.ComponentPropsWithoutRef<"div">, "onBeforeInput">
 >(({ className, ...props }, ref) => {
   return (
     <div
@@ -440,7 +440,7 @@ SidebarGroup.displayName = "SidebarGroup"
 
 const SidebarGroupLabel = React.forwardRef<
   HTMLDivElement,
-  React.ComponentProps<"div"> & { asChild?: boolean }
+  Omit<React.ComponentPropsWithoutRef<"div">, "onBeforeInput"> & { asChild?: boolean }
 >(({ className, asChild = false, ...props }, ref) => {
   const Comp = asChild ? Slot : "div"
 
@@ -461,7 +461,7 @@ SidebarGroupLabel.displayName = "SidebarGroupLabel"
 
 const SidebarGroupAction = React.forwardRef<
   HTMLButtonElement,
-  React.ComponentProps<"button"> & { asChild?: boolean }
+  Omit<React.ComponentPropsWithoutRef<"button">, "onBeforeInput"> & { asChild?: boolean }
 >(({ className, asChild = false, ...props }, ref) => {
   const Comp = asChild ? Slot : "button"
 
@@ -604,7 +604,7 @@ SidebarMenuButton.displayName = "SidebarMenuButton"
 
 const SidebarMenuAction = React.forwardRef<
   HTMLButtonElement,
-  React.ComponentProps<"button"> & {
+  Omit<React.ComponentPropsWithoutRef<"button">, "onBeforeInput"> & {
     asChild?: boolean
     showOnHover?: boolean
   }
@@ -635,7 +635,7 @@ SidebarMenuAction.displayName = "SidebarMenuAction"
 
 const SidebarMenuBadge = React.forwardRef<
   HTMLDivElement,
-  React.ComponentProps<"div">
+  Omit<React.ComponentPropsWithoutRef<"div">, "onBeforeInput">
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
@@ -656,7 +656,7 @@ SidebarMenuBadge.displayName = "SidebarMenuBadge"
 
 const SidebarMenuSkeleton = React.forwardRef<
   HTMLDivElement,
-  React.ComponentProps<"div"> & {
+  Omit<React.ComponentPropsWithoutRef<"div">, "onBeforeInput"> & {
     showIcon?: boolean
   }
 >(({ className, showIcon = false, ...props }, ref) => {
