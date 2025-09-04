@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "wouter";
 import { Globe } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
+import AIAnnouncementBanner from "@/components/AIAnnouncementBanner";
 import WhyEgySafary from "@/components/WhyEgySafary";
 import PlannerSection from "@/components/PlannerSection";
 import ExploreSection from "@/components/ExploreSection";
@@ -51,6 +52,7 @@ export default function Home() {
       </div>
       
       <HeroSection />
+      <AIAnnouncementBanner />
       <WhyEgySafary />
       <PlannerSection />
       <ExploreSection />
