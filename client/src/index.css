@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DG+Ghayaty:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -47,6 +48,7 @@
   /* Fonts */
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-jakarta: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-ghayaty: "DG Ghayaty", "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 .dark {
@@ -145,5 +147,9 @@
 @layer utilities {
   .font-jakarta {
     font-family: var(--font-jakarta);
+  }
+  
+  .font-ghayaty {
+    font-family: var(--font-ghayaty);
   }
 }

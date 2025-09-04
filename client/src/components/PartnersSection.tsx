@@ -15,7 +15,7 @@ export default function PartnersSection() {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-12 scroll-reveal">
-          <h3 className="font-jakarta font-bold text-2xl text-card-foreground mb-2" data-testid="partners-title">
+          <h3 className="font-ghayaty font-bold text-2xl text-card-foreground mb-2" data-testid="partners-title">
             Trusted by 30+ Verified Partners
           </h3>
           <p className="text-muted-foreground" data-testid="partners-subtitle">

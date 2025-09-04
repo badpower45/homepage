@@ -76,6 +76,7 @@ export default {
         mono: ["var(--font-mono)"],
         jakarta: ["var(--font-jakarta)"],
         inter: ["var(--font-sans)"],
+        ghayaty: ["var(--font-ghayaty)"],
       },
       keyframes: {
         "accordion-down": {

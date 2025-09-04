@@ -40,7 +40,7 @@ export default function AdsSection() {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16 scroll-reveal">
-          <h2 className="font-jakarta font-bold text-4xl lg:text-5xl mb-6 text-foreground" data-testid="ads-title">
+          <h2 className="font-ghayaty font-bold text-4xl lg:text-5xl mb-6 text-foreground" data-testid="ads-title">
             <span className="text-gradient">Exclusive Offers</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="ads-subtitle">
@@ -68,7 +68,7 @@ export default function AdsSection() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="font-jakarta font-bold text-2xl mb-3 text-card-foreground">{offer.title}</h3>
+                <h3 className="font-ghayaty font-bold text-2xl mb-3 text-card-foreground">{offer.title}</h3>
                 <p className="text-muted-foreground mb-4">{offer.description}</p>
                 <div className="flex items-center justify-between">
                   <span className={`text-2xl font-bold ${offer.discountColor}`}>{offer.discount}</span>

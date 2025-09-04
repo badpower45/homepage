@@ -40,7 +40,7 @@ export default function WhyEgySafary() {
     <section className="py-20 bg-gradient-to-b from-background to-secondary">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-jakarta font-bold text-4xl lg:text-5xl mb-6 text-foreground" data-testid="section-title">
+          <h2 className="font-ghayaty font-bold text-4xl lg:text-5xl mb-6 text-foreground" data-testid="section-title">
             Why Choose <span className="text-gradient">Egy Safary</span>?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="section-subtitle">
@@ -65,7 +65,7 @@ export default function WhyEgySafary() {
                   {pillar.badge}
                 </span>
               </div>
-              <h3 className="font-jakarta font-bold text-2xl mb-4 text-foreground">{pillar.title}</h3>
+              <h3 className="font-ghayaty font-bold text-2xl mb-4 text-foreground">{pillar.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{pillar.description}</p>
             </div>
           ))}

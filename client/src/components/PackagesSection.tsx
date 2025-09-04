@@ -80,7 +80,7 @@ export default function PackagesSection() {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16 scroll-reveal">
-          <h2 className="font-jakarta font-bold text-4xl lg:text-5xl mb-6 text-foreground" data-testid="packages-title">
+          <h2 className="font-ghayaty font-bold text-4xl lg:text-5xl mb-6 text-foreground" data-testid="packages-title">
             <span className="text-gradient">Your Journey</span>, Your Way
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="packages-subtitle">
@@ -145,7 +145,7 @@ export default function PackagesSection() {
                     <pkg.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-jakarta font-bold text-2xl text-card-foreground">{pkg.name}</h3>
+                    <h3 className="font-ghayaty font-bold text-2xl text-card-foreground">{pkg.name}</h3>
                     <p className="text-muted-foreground text-sm">{pkg.description}</p>
                   </div>
                 </div>

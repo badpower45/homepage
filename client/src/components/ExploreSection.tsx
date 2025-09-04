@@ -79,7 +79,7 @@ export default function ExploreSection() {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16 scroll-reveal">
-          <h2 className="font-jakarta font-bold text-4xl lg:text-5xl mb-6 text-foreground" data-testid="explore-title">
+          <h2 className="font-ghayaty font-bold text-4xl lg:text-5xl mb-6 text-foreground" data-testid="explore-title">
             Curated for You: <span className="text-gradient">Port Said's Best</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="explore-subtitle">
@@ -90,7 +90,7 @@ export default function ExploreSection() {
         {/* Restaurants & Cafés */}
         <div className="mb-20 scroll-reveal">
           <div className="flex items-center justify-between mb-8">
-            <h3 className="font-jakarta font-bold text-3xl text-foreground flex items-center gap-3" data-testid="restaurants-title">
+            <h3 className="font-ghayaty font-bold text-3xl text-foreground flex items-center gap-3" data-testid="restaurants-title">
               <Utensils className="w-8 h-8 text-accent-gold" />
               Restaurants & Cafés
             </h3>
@@ -105,7 +105,7 @@ export default function ExploreSection() {
                 <img src={restaurant.image} alt={restaurant.name} className="w-full h-48 object-cover" />
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-3">
-                    <h4 className="font-jakarta font-bold text-xl text-card-foreground">{restaurant.name}</h4>
+                    <h4 className="font-ghayaty font-bold text-xl text-card-foreground">{restaurant.name}</h4>
                     <div className="flex items-center gap-1">
                       <Star className="w-4 h-4 text-accent-gold fill-current" />
                       <span className="text-sm font-semibold">{restaurant.rating}</span>
@@ -145,7 +145,7 @@ export default function ExploreSection() {
         {/* Shopping & Local Finds */}
         <div className="mb-20 scroll-reveal">
           <div className="flex items-center justify-between mb-8">
-            <h3 className="font-jakarta font-bold text-3xl text-foreground flex items-center gap-3" data-testid="shopping-title">
+            <h3 className="font-ghayaty font-bold text-3xl text-foreground flex items-center gap-3" data-testid="shopping-title">
               <ShoppingBag className="w-8 h-8 text-accent-lilac" />
               Shopping & Local Finds
             </h3>
@@ -161,7 +161,7 @@ export default function ExploreSection() {
                   <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center mb-3">
                     <ShoppingBag className="w-6 h-6 text-white" />
                   </div>
-                  <h4 className="font-jakarta font-bold text-xl text-foreground">{store.name}</h4>
+                  <h4 className="font-ghayaty font-bold text-xl text-foreground">{store.name}</h4>
                   <p className="text-muted-foreground text-sm">{store.description}</p>
                 </div>
                 <div className="flex items-center gap-2">
@@ -187,7 +187,7 @@ export default function ExploreSection() {
         {/* Landmarks & Activities */}
         <div className="scroll-reveal">
           <div className="flex items-center justify-between mb-8">
-            <h3 className="font-jakarta font-bold text-3xl text-foreground flex items-center gap-3" data-testid="landmarks-title">
+            <h3 className="font-ghayaty font-bold text-3xl text-foreground flex items-center gap-3" data-testid="landmarks-title">
               <Landmark className="w-8 h-8 text-accent-teal" />
               Landmarks & Activities
             </h3>
@@ -201,7 +201,7 @@ export default function ExploreSection() {
               <div key={index} className="bg-card hover-lift rounded-2xl overflow-hidden shadow-lg border border-border" data-testid={`landmark-card-${index}`}>
                 <img src={landmark.image} alt={landmark.name} className="w-full h-32 object-cover" />
                 <div className="p-6">
-                  <h4 className="font-jakarta font-bold text-xl text-foreground mb-2">{landmark.name}</h4>
+                  <h4 className="font-ghayaty font-bold text-xl text-foreground mb-2">{landmark.name}</h4>
                   <p className="text-muted-foreground text-sm mb-3">{landmark.description}</p>
                   <div className="flex items-center gap-2">
                     {landmark.badges.map((badge, badgeIndex) => (

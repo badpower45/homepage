@@ -54,7 +54,7 @@ export default function TestimonialsSection() {
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16 scroll-reveal">
-          <h2 className="font-jakarta font-bold text-4xl lg:text-5xl mb-6 text-white" data-testid="testimonials-title">
+          <h2 className="font-ghayaty font-bold text-4xl lg:text-5xl mb-6 text-white" data-testid="testimonials-title">
             Voices of Our <span className="text-accent-teal">Travelers</span>
           </h2>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto" data-testid="testimonials-subtitle">

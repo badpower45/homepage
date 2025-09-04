@@ -28,7 +28,7 @@ export default function PlannerSection() {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="font-jakarta font-bold text-4xl lg:text-5xl mb-6 text-white" data-testid="planner-title">
+          <h2 className="font-ghayaty font-bold text-4xl lg:text-5xl mb-6 text-white" data-testid="planner-title">
             Plan Your <span className="text-accent-teal">Safe Adventure</span>
           </h2>
           <p className="text-xl text-gray-200 max-w-2xl mx-auto" data-testid="planner-subtitle">
@@ -56,7 +56,7 @@ export default function PlannerSection() {
             
             {/* Step 1: Choose Your Vibe */}
             <div className="mb-8">
-              <h3 className="font-jakarta font-bold text-2xl text-white mb-6" data-testid="step-title">
+              <h3 className="font-ghayaty font-bold text-2xl text-white mb-6" data-testid="step-title">
                 What's your vibe?
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

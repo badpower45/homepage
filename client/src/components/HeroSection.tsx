@@ -38,7 +38,7 @@ export default function HeroSection() {
         
         {/* Main Headline */}
         <div className="scroll-reveal mb-6" style={{animationDelay: "0.1s"}}>
-          <h1 className="font-jakarta font-bold text-4xl md:text-6xl lg:text-7xl leading-tight mb-6 text-white" data-testid="hero-title">
+          <h1 className="font-ghayaty font-bold text-4xl md:text-6xl lg:text-7xl leading-tight mb-6 text-white" data-testid="hero-title">
             Egy Safary: Your Trusted<br />
             Journey to <span className="text-gradient">Port Said's Heart</span>
           </h1>
