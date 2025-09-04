@@ -31,13 +31,13 @@ export default function AIAnnouncementBanner() {
           
           {/* Main Announcement */}
           <div className="scroll-reveal mb-8" style={{animationDelay: "0.1s"}}>
-            <h2 className="font-ghayaty font-black text-5xl md:text-7xl lg:text-8xl mb-6 text-white leading-tight" data-testid="ai-title">
-              🤖 مساعدك الذكي<br />
-              <span className="text-accent-gold animate-pulse">الجديد!</span>
+            <h2 className="font-ghayaty font-black text-3xl md:text-5xl lg:text-6xl mb-6 text-white leading-tight" data-testid="ai-title">
+              🤖 New AI Travel Assistant<br />
+              <span className="text-accent-gold animate-pulse">Coming Soon!</span>
             </h2>
-            <p className="text-2xl md:text-3xl text-white max-w-4xl mx-auto leading-relaxed font-semibold" data-testid="ai-subtitle">
-              اكتشف بورسعيد بطريقة ذكية مع مساعد إيجي سفاري الشخصي<br />
-              <span className="text-accent-teal">توصيات فورية • خطط ذكية • تجربة شخصية</span>
+            <p className="text-lg md:text-xl text-white max-w-4xl mx-auto leading-relaxed font-semibold" data-testid="ai-subtitle">
+              Discover Port Said intelligently with your personal Egy Safary assistant<br />
+              <span className="text-accent-teal">Instant Recommendations • Smart Planning • Personalized Experience</span>
             </p>
           </div>
           
@@ -45,31 +45,31 @@ export default function AIAnnouncementBanner() {
           <div className="scroll-reveal grid md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto" style={{animationDelay: "0.2s"}}>
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-white border-opacity-20 hover-lift">
               <Zap className="w-10 h-10 text-accent-gold mb-4 mx-auto" />
-              <h3 className="font-ghayaty font-bold text-xl text-white mb-2">توصيات فورية</h3>
-              <p className="text-gray-200 text-sm">اسأل أي سؤال واحصل على إجابات ذكية عن بورسعيد</p>
+              <h3 className="font-ghayaty font-bold text-xl text-white mb-2">Instant Recommendations</h3>
+              <p className="text-gray-200 text-sm">Ask any question and get smart answers about Port Said</p>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-white border-opacity-20 hover-lift">
               <Bot className="w-10 h-10 text-accent-teal mb-4 mx-auto" />
-              <h3 className="font-ghayaty font-bold text-xl text-white mb-2">مساعد شخصي</h3>
-              <p className="text-gray-200 text-sm">يتعلم تفضيلاتك ويقترح أفضل الأماكن ليك</p>
+              <h3 className="font-ghayaty font-bold text-xl text-white mb-2">Personal Assistant</h3>
+              <p className="text-gray-200 text-sm">Learns your preferences and suggests the best places for you</p>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-white border-opacity-20 hover-lift">
               <Sparkles className="w-10 h-10 text-accent-pink mb-4 mx-auto" />
-              <h3 className="font-ghayaty font-bold text-xl text-white mb-2">خطط ذكية</h3>
-              <p className="text-gray-200 text-sm">خطط رحلتك في ثواني مع الذكاء الاصطناعي</p>
+              <h3 className="font-ghayaty font-bold text-xl text-white mb-2">Smart Planning</h3>
+              <p className="text-gray-200 text-sm">Plan your trip in seconds with AI assistance</p>
             </div>
           </div>
           
           {/* CTA Buttons */}
           <div className="scroll-reveal flex flex-col sm:flex-row gap-6 justify-center items-center" style={{animationDelay: "0.3s"}}>
-            <button className="group bg-accent-gold hover:bg-accent-gold/90 text-white font-black text-2xl px-12 py-6 rounded-2xl shadow-2xl hover-lift transition-all duration-200 flex items-center gap-4" data-testid="button-join-ai-waitlist">
-              <Bot className="w-8 h-8 group-hover:rotate-12 transition-transform" />
-              اشترك في قائمة الانتظار
+            <button className="group bg-accent-gold hover:bg-accent-gold/90 text-white font-black text-xl px-10 py-5 rounded-2xl shadow-2xl hover-lift transition-all duration-200 flex items-center gap-4" data-testid="button-join-ai-waitlist">
+              <Bot className="w-7 h-7 group-hover:rotate-12 transition-transform" />
+              Join AI Waitlist
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </button>
             <div className="text-white text-center">
-              <div className="text-lg font-bold mb-1">🔥 العرض محدود</div>
-              <div className="text-sm opacity-90">أول ١٠٠ مستخدم هيحصلوا على الخدمة مجاناً لمدة شهر!</div>
+              <div className="text-lg font-bold mb-1">🔥 Limited Offer</div>
+              <div className="text-sm opacity-90">First 100 users get 1 month free access!</div>
             </div>
           </div>
           
@@ -77,7 +77,7 @@ export default function AIAnnouncementBanner() {
           <div className="scroll-reveal mt-8" style={{animationDelay: "0.4s"}}>
             <div className="inline-flex items-center gap-2 px-6 py-3 bg-accent-gold bg-opacity-20 backdrop-blur-sm rounded-full border border-accent-gold border-opacity-50">
               <div className="w-3 h-3 bg-accent-gold rounded-full animate-pulse"></div>
-              <span className="text-white font-semibold">قريباً جداً في يناير ٢٠٢٥</span>
+              <span className="text-white font-semibold">Coming Soon - January 2025</span>
             </div>
           </div>
         </div>

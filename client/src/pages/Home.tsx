@@ -52,9 +52,9 @@ export default function Home() {
       </div>
       
       <HeroSection />
-      <AIAnnouncementBanner />
       <WhyEgySafary />
       <PlannerSection />
+      <AIAnnouncementBanner />
       <ExploreSection />
       <PackagesSection />
       <TestimonialsSection />
