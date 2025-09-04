@@ -41,7 +41,7 @@ BreadcrumbItem.displayName = "BreadcrumbItem"
 
 const BreadcrumbLink = React.forwardRef<
   HTMLAnchorElement,
-  React.ComponentPropsWithoutRef<"a"> & {
+  Omit<React.ComponentPropsWithoutRef<"a">, "onBeforeInput"> & {
     asChild?: boolean
   }
 >(({ asChild, className, ...props }, ref) => {

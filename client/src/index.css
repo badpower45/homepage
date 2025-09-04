@@ -1,155 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DG+Ghayaty:wght@400;500;600;700;800&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
-  --radius: 12px;
-  
-  /* Brand Colors */
-  --background: hsl(220, 40%, 98%);
-  --foreground: hsl(222, 84%, 5%);
-  --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(222, 84%, 5%);
-  --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(222, 84%, 5%);
-  
-  /* Primary Palette - Gen-Z Blues */
-  --primary-700: hsl(208, 74%, 14%); /* #0B2A3B Deep Port Navy */
-  --primary-600: hsl(224, 89%, 46%); /* #0F4FDB Canal Blue */
-  --primary-500: hsl(216, 92%, 52%); /* #1464F4 Signal Azure */
-  --primary-300: hsl(193, 84%, 62%); /* #4CC9F0 Sky Ripple */
-  --primary: hsl(216, 92%, 52%);
-  --primary-foreground: hsl(0, 0%, 100%);
-  
-  /* Secondary */
-  --secondary: hsl(210, 40%, 96%);
-  --secondary-foreground: hsl(222, 84%, 5%);
-  
-  /* Accent Colors */
-  --accent-gold: hsl(46, 56%, 50%); /* #C9A23A Luxury Gold */
-  --accent-teal: hsl(184, 100%, 44%); /* #00D2DF Youth Teal */
-  --accent-lilac: hsl(262, 83%, 78%); /* #B388FF Playful Lilac */
-  --accent-pink: hsl(329, 73%, 58%); /* #EC4899 Gen-Z Pink */
-  --accent: hsl(184, 100%, 44%);
-  --accent-foreground: hsl(0, 0%, 100%);
-  
-  /* Neutrals */
-  --muted: hsl(210, 40%, 96%);
-  --muted-foreground: hsl(215, 13%, 65%);
-  --border: hsl(214, 32%, 91%);
-  --input: hsl(214, 32%, 91%);
-  --ring: hsl(216, 92%, 52%);
-  --destructive: hsl(0, 84%, 60%);
-  --destructive-foreground: hsl(0, 0%, 98%);
-  
-  /* Fonts */
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-jakarta: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-ghayaty: "DG Ghayaty", "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.dark {
-  --background: hsl(208, 74%, 8%);
-  --foreground: hsl(210, 40%, 98%);
-  --card: hsl(208, 74%, 12%);
-  --card-foreground: hsl(210, 40%, 98%);
-  --popover: hsl(208, 74%, 12%);
-  --popover-foreground: hsl(210, 40%, 98%);
-  --primary-700: hsl(208, 74%, 6%);
-  --secondary: hsl(217, 32%, 15%);
-  --secondary-foreground: hsl(210, 40%, 98%);
-  --muted: hsl(217, 32%, 15%);
-  --muted-foreground: hsl(215, 20%, 65%);
-  --border: hsl(217, 32%, 20%);
-  --input: hsl(217, 32%, 20%);
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
 }
 
-.glass-card {
-  background: rgba(11, 42, 59, 0.45);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
-.hero-video-overlay {
-  background: linear-gradient(135deg, 
-    rgba(11, 42, 59, 0.35) 0%, 
-    rgba(20, 100, 244, 0.25) 100%);
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 
-.gradient-primary {
-  background: linear-gradient(135deg, hsl(216, 92%, 52%) 0%, hsl(184, 100%, 44%) 100%);
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
-.gradient-pop {
-  background: linear-gradient(135deg, hsl(262, 83%, 78%) 0%, hsl(193, 84%, 62%) 100%);
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-.animate-pulse-slow {
-  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(1deg); }
-}
-
-.hover-lift {
-  transition: all 0.15s ease;
-}
-
-.hover-lift:hover {
-  transform: translateY(-2px) scale(1.01);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-.text-gradient {
-  background: linear-gradient(135deg, hsl(216, 92%, 52%) 0%, hsl(184, 100%, 44%) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.scroll-reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease;
-}
-
-.scroll-reveal.revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .animate-float,
-  .animate-pulse-slow {
-    animation: none;
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
   }
-}
-
-@layer base {
-  * {
-    @apply border-border;
+  a:hover {
+    color: #747bff;
   }
-
-  body {
-    @apply font-sans antialiased bg-background text-foreground;
-  }
-}
-
-@layer utilities {
-  .font-jakarta {
-    font-family: var(--font-jakarta);
-  }
-  
-  .font-ghayaty {
-    font-family: var(--font-ghayaty);
+  button {
+    background-color: #f9f9f9;
   }
 }

@@ -40,6 +40,8 @@ type SidebarContextProps = {
   toggleSidebar: () => void
 }
 
+type CustomEventProps = Omit<React.ComponentPropsWithoutRef<"div" | "button" | "a">, "onBeforeInput">
+
 const SidebarContext = React.createContext<SidebarContextProps | null>(null)
 
 function useSidebar() {
