@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egy Safary - Your Trusted Journey to Port Said's Heart</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                borderRadius: {
+                    lg: "var(--radius)",
+                    md: "calc(var(--radius) - 2px)",
+                    sm: "calc(var(--radius) - 4px)",
+                },
+                colors: {
+                    background: "var(--background)",
+                    foreground: "var(--foreground)",
+                    card: {
+                        DEFAULT: "var(--card)",
+                        foreground: "var(--card-foreground)",
+                    },
+                    popover: {
+                        DEFAULT: "var(--popover)",
+                        foreground: "var(--popover-foreground)",
+                    },
+                    primary: {
+                        DEFAULT: "var(--primary)",
+                        foreground: "var(--primary-foreground)",
+                        700: "var(--primary-700)",
+                        600: "var(--primary-600)",
+                        500: "var(--primary-500)",
+                        300: "var(--primary-300)",
+                    },
+                    secondary: {
+                        DEFAULT: "var(--secondary)",
+                        foreground: "var(--secondary-foreground)",
+                    },
+                    muted: {
+                        DEFAULT: "var(--muted)",
+                        foreground: "var(--muted-foreground)",
+                    },
+                    accent: {
+                        DEFAULT: "var(--accent)",
+                        foreground: "var(--accent-foreground)",
+                        gold: "var(--accent-gold)",
+                        teal: "var(--accent-teal)",
+                        lilac: "var(--accent-lilac)",
+                        pink: "var(--accent-pink)",
+                    },
+                    destructive: {
+                        DEFAULT: "var(--destructive)",
+                        foreground: "var(--destructive-foreground)",
+                    },
+                    border: "var(--border)",
+                    input: "var(--input)",
+                    ring: "var(--ring)",
+                },
+                fontFamily: {
+                    sans: ["var(--font-sans)"],
+                    serif: ["var(--font-serif)"],
+                    mono: ["var(--font-mono)"],
+                    jakarta: ["Plus Jakarta Sans", "var(--font-sans)"],
+                    inter: ["Inter", "var(--font-sans)"],
+                }
+            },
+        }
+    };
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <style>
+        :root {
+            --radius: 12px;
+            
+            /* Brand Colors */
+            --background: hsl(220 40% 98%);
+            --foreground: hsl(222 84% 5%);
+            --card: hsl(0 0% 100%);
+            --card-foreground: hsl(222 84% 5%);
+            --popover: hsl(0 0% 100%);
+            --popover-foreground: hsl(222 84% 5%);
+            
+            /* Primary Palette - Gen-Z Blues */
+            --primary-700: hsl(208 74% 14%); /* #0B2A3B Deep Port Navy */
+            --primary-600: hsl(224 89% 46%); /* #0F4FDB Canal Blue */
+            --primary-500: hsl(216 92% 52%); /* #1464F4 Signal Azure */
+            --primary-300: hsl(193 84% 62%); /* #4CC9F0 Sky Ripple */
+            --primary: var(--primary-500);
+            --primary-foreground: hsl(0 0% 100%);
+            
+            /* Secondary */
+            --secondary: hsl(210 40% 96%);
+            --secondary-foreground: hsl(222 84% 5%);
+            
+            /* Accent Colors */
+            --accent-gold: hsl(46 56% 50%); /* #C9A23A Luxury Gold */
+            --accent-teal: hsl(184 100% 44%); /* #00D2DF Youth Teal */
+            --accent-lilac: hsl(262 83% 78%); /* #B388FF Playful Lilac */
+            --accent-pink: hsl(329 73% 58%); /* #EC4899 Gen-Z Pink */
+            --accent: var(--accent-teal);
+            --accent-foreground: hsl(0 0% 100%);
+            
+            /* Neutrals */
+            --muted: hsl(210 40% 96%);
+            --muted-foreground: hsl(215 13% 65%);
+            --border: hsl(214 32% 91%);
+            --input: hsl(214 32% 91%);
+            --ring: var(--primary-500);
+            --destructive: hsl(0 84% 60%);
+            --destructive-foreground: hsl(0 0% 98%);
+            
+            /* Fonts */
+            --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            --font-jakarta: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+        
+        .dark {
+            --background: hsl(208 74% 8%);
+            --foreground: hsl(210 40% 98%);
+            --card: hsl(208 74% 12%);
+            --card-foreground: hsl(210 40% 98%);
+            --popover: hsl(208 74% 12%);
+            --popover-foreground: hsl(210 40% 98%);
+            --primary-700: hsl(208 74% 6%);
+            --secondary: hsl(217 32% 15%);
+            --secondary-foreground: hsl(210 40% 98%);
+            --muted: hsl(217 32% 15%);
+            --muted-foreground: hsl(215 20% 65%);
+            --border: hsl(217 32% 20%);
+            --input: hsl(217 32% 20%);
+        }
+
+        .glass-card {
+            background: rgba(11, 42, 59, 0.45);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .hero-video-overlay {
+            background: linear-gradient(135deg, 
+                rgba(11, 42, 59, 0.35) 0%, 
+                rgba(20, 100, 244, 0.25) 100%);
+        }
+
+        .gradient-primary {
+            background: linear-gradient(135deg, hsl(216 92% 52%) 0%, hsl(184 100% 44%) 100%);
+        }
+
+        .gradient-pop {
+            background: linear-gradient(135deg, hsl(262 83% 78%) 0%, hsl(193 84% 62%) 100%);
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .animate-pulse-slow {
+            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(1deg); }
+        }
+
+        .hover-lift {
+            transition: all 0.15s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-2px) scale(1.01);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, hsl(216 92% 52%) 0%, hsl(184 100% 44%) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animate-float,
+            .animate-pulse-slow {
+                animation: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-foreground font-inter antialiased">
+    
+    <!-- @COMPONENT: HeroSection -->
+    <!-- [1] HERO SECTION - The Grand Welcome -->
+    <section class="relative h-screen min-h-[90vh] w-full overflow-hidden">
+        <!-- Background Video -->
+        <!-- Port Said waterfront and Suez Canal views with traditional boats -->
+        <video class="absolute inset-0 w-full h-full object-cover z-0" autoplay muted loop>
+            <source src="https://pixabay.com/get/g530f24ff2cfba61a56ab671d4ee3e4d3747ea96ce89acec6db8055773b6e848c844c2c2cde8546064c063d5938702f29e3f49322466d401c6407e799756eb920_1280.jpg" type="video/mp4" data-mock="true">
+        </video>
+        
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 hero-video-overlay z-10"></div>
+        
+        <!-- Grid Texture Overlay -->
+        <div class="absolute inset-0 opacity-8 z-20" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0); background-size: 20px 20px;"></div>
+        
+        <!-- Hero Content -->
+        <div class="relative z-30 container mx-auto px-6 h-full flex flex-col justify-center items-center text-center">
+            <!-- Eyebrow -->
+            <div class="scroll-reveal mb-4">
+                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium tracking-wide uppercase glass-card text-white">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-accent-teal"></i>
+                    Port Said / Egypt
+                </span>
+            </div>
+            
+            <!-- Main Headline -->
+            <div class="scroll-reveal mb-6" style="animation-delay: 0.1s;">
+                <h1 class="font-jakarta font-bold text-4xl md:text-6xl lg:text-7xl leading-tight mb-6 text-white">
+                    Egy Safary: Your Trusted<br>
+                    Journey to <span class="text-gradient">Port Said's Heart</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
+                    Seamless Exploration, Authentic Experiences, Unforgettable Memories.<br>
+                    <span class="text-accent-teal font-semibold">Your Safety, Our Priority.</span>
+                </p>
+            </div>
+            
+            <!-- CTAs -->
+            <div class="scroll-reveal flex flex-col sm:flex-row gap-4 mb-8" style="animation-delay: 0.2s;">
+                <button class="group gradient-primary hover-lift px-8 py-4 rounded-xl text-white font-semibold text-lg transition-all duration-150 shadow-lg flex items-center gap-3 animate-pulse-slow">
+                    <i data-lucide="rocket" class="w-6 h-6 group-hover:rotate-12 transition-transform"></i>
+                    Plan Your Safe Adventure
+                </button>
+                <button class="group glass-card hover-lift px-8 py-4 rounded-xl text-white font-semibold text-lg transition-all duration-150 shadow-lg flex items-center gap-3">
+                    <i data-lucide="compass" class="w-6 h-6 group-hover:rotate-12 transition-transform"></i>
+                    Discover Port Said
+                </button>
+            </div>
+            
+            <!-- Trust Strip -->
+            <div class="scroll-reveal flex flex-wrap justify-center gap-6" style="animation-delay: 0.3s;">
+                <div class="glass-card px-4 py-3 rounded-full flex items-center gap-2 text-white hover-lift">
+                    <i data-lucide="shield-check" class="w-5 h-5 text-accent-teal"></i>
+                    <span class="text-sm font-medium">Secure</span>
+                </div>
+                <div class="glass-card px-4 py-3 rounded-full flex items-center gap-2 text-white hover-lift">
+                    <i data-lucide="check-circle" class="w-5 h-5 text-accent-gold"></i>
+                    <span class="text-sm font-medium">Verified Partners</span>
+                </div>
+                <div class="glass-card px-4 py-3 rounded-full flex items-center gap-2 text-white hover-lift">
+                    <i data-lucide="headset" class="w-5 h-5 text-accent-lilac"></i>
+                    <span class="text-sm font-medium">24/7 Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: HeroSection -->
+
+    <!-- @COMPONENT: WhyEgySafary -->
+    <!-- [2] WHY EGY SAFARY? - Our Commitment -->
+    <section class="py-20 bg-gradient-to-b from-background to-secondary">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-jakarta font-bold text-4xl lg:text-5xl mb-6 text-foreground">
+                    Why Choose <span class="text-gradient">Egy Safary</span>?
+                </h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                    Our commitment to excellence makes your Port Said experience unforgettable
+                </p>
+            </div>
+            
+            <!-- Pillars Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Safety -->
+                <div class="scroll-reveal bg-card hover-lift rounded-2xl p-8 shadow-lg border border-border" style="animation-delay: 0s;">
+                    <div class="mb-6">
+                        <div class="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="shield" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <span class="inline-block px-3 py-1 bg-accent-teal text-white text-xs font-semibold rounded-full">Verified</span>
+                    </div>
+                    <h3 class="font-jakarta font-bold text-2xl mb-4 text-foreground">Safety First</h3>
+                    <p class="text-muted-foreground leading-relaxed">Every partner is verified and monitored for your peace of mind</p>
+                </div>
+                
+                <!-- Authenticity -->
+                <div class="scroll-reveal bg-card hover-lift rounded-2xl p-8 shadow-lg border border-border" style="animation-delay: 0.1s;">
+                    <div class="mb-6">
+                        <div class="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="sparkles" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <span class="inline-block px-3 py-1 bg-accent-gold text-white text-xs font-semibold rounded-full">Verified</span>
+                    </div>
+                    <h3 class="font-jakarta font-bold text-2xl mb-4 text-foreground">Authenticity</h3>
+                    <p class="text-muted-foreground leading-relaxed">Real local experiences curated by Port Said experts</p>
+                </div>
+                
+                <!-- Planning -->
+                <div class="scroll-reveal bg-card hover-lift rounded-2xl p-8 shadow-lg border border-border" style="animation-delay: 0.2s;">
+                    <div class="mb-6">
+                        <div class="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="calendar" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <span class="inline-block px-3 py-1 bg-accent-lilac text-white text-xs font-semibold rounded-full">Verified</span>
+                    </div>
+                    <h3 class="font-jakarta font-bold text-2xl mb-4 text-foreground">Smart Planning</h3>
+                    <p class="text-muted-foreground leading-relaxed">AI-powered recommendations tailored to your preferences</p>
+                </div>
+                
+                <!-- Support -->
+                <div class="scroll-reveal bg-card hover-lift rounded-2xl p-8 shadow-lg border border-border" style="animation-delay: 0.3s;">
+                    <div class="mb-6">
+                        <div class="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="life-buoy" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <span class="inline-block px-3 py-1 bg-accent-pink text-white text-xs font-semibold rounded-full">Verified</span>
+                    </div>
+                    <h3 class="font-jakarta font-bold text-2xl mb-4 text-foreground">24/7 Support</h3>
+                    <p class="text-muted-foreground leading-relaxed">Always here when you need us, in multiple languages</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: WhyEgySafary -->
+
+    <!-- @COMPONENT: PlannerSection -->
+    <!-- [3] PLANNER SNAP-IN - Quick Safe Plan -->
+    <section class="py-20 bg-gradient-to-br from-primary-700 to-primary-500 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"grain\" width=\"100\" height=\"100\" patternUnits=\"userSpaceOnUse\"><circle cx=\"50\" cy=\"50\" r=\"1\" fill=\"white\" opacity=\"0.1\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23grain)\"/></svg>'); background-size: 100px 100px;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="font-jakarta font-bold text-4xl lg:text-5xl mb-6 text-white">
+                    Plan Your <span class="text-accent-teal">Safe Adventure</span>
+                </h2>
+                <p class="text-xl text-gray-200 max-w-2xl mx-auto">
+                    Our smart planner helps you create the perfect Port Said experience in minutes
+                </p>
+            </div>
+            
+            <!-- Planner Card -->
+            <div class="max-w-4xl mx-auto">
+                <div class="glass-card rounded-3xl p-8 md:p-12">
+                    <!-- Progress Bar -->
+                    <div class="mb-8">
+                        <div class="flex justify-between text-sm text-white mb-2">
+                            <span>Step 1 of 3</span>
+                            <span>33%</span>
+                        </div>
+                        <div class="w-full bg-white bg-opacity-20 rounded-full h-2">
+                            <div class="bg-accent-teal h-2 rounded-full transition-all duration-500 ease-out" style="width: 33%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 1: Choose Your Vibe -->
+                    <div class="mb-8">
+                        <h3 class="font-jakarta font-bold text-2xl text-white mb-6">What's your vibe?</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <button class="group bg-white bg-opacity-10 hover:bg-opacity-20 rounded-xl p-6 text-center transition-all duration-150 hover-lift border border-white border-opacity-20">
+                                <i data-lucide="utensils" class="w-8 h-8 text-accent-gold mb-3 mx-auto group-hover:scale-110 transition-transform"></i>
+                                <span class="block text-white font-medium">Food</span>
+                            </button>
+                            <button class="group bg-white bg-opacity-10 hover:bg-opacity-20 rounded-xl p-6 text-center transition-all duration-150 hover-lift border border-white border-opacity-20">
+                                <i data-lucide="shopping-bag" class="w-8 h-8 text-accent-lilac mb-3 mx-auto group-hover:scale-110 transition-transform"></i>
+                                <span class="block text-white font-medium">Shopping</span>
+                            </button>
+                            <button class="group bg-white bg-opacity-10 hover:bg-opacity-20 rounded-xl p-6 text-center transition-all duration-150 hover-lift border border-white border-opacity-20">
+                                <i data-lucide="landmark" class="w-8 h-8 text-accent-teal mb-3 mx-auto group-hover:scale-110 transition-transform"></i>
+                                <span class="block text-white font-medium">Culture</span>
+                            </button>
+                            <button class="group bg-white bg-opacity-10 hover:bg-opacity-20 rounded-xl p-6 text-center transition-all duration-150 hover-lift border border-white border-opacity-20">
+                                <i data-lucide="users" class="w-8 h-8 text-accent-pink mb-3 mx-auto group-hover:scale-110 transition-transform"></i>
+                                <span class="block text-white font-medium">Family</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Next Steps Preview -->
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-white bg-opacity-5 rounded-xl p-4 border border-white border-opacity-10">
+                            <h4 class="text-white font-semibold mb-2 flex items-center gap-2">
+                                <i data-lucide="calendar-days" class="w-5 h-5"></i>
+                                Step 2: Select Date & Time
+                            </h4>
+                            <p class="text-gray-300 text-sm">Choose your perfect visit time</p>
+                        </div>
+                        <div class="bg-white bg-opacity-5 rounded-xl p-4 border border-white border-opacity-10">
+                            <h4 class="text-white font-semibold mb-2 flex items-center gap-2">
+                                <i data-lucide="package" class="w-5 h-5"></i>
+                                Step 3: Pick Your Package
+                            </h4>
+                            <p class="text-gray-300 text-sm">From budget to VIP experiences</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Build Plan Button -->
+                    <div class="text-center">
+                        <button class="gradient-pop hover-lift px-10 py-4 rounded-xl text-white font-bold text-lg transition-all duration-150 shadow-lg flex items-center gap-3 mx-auto" data-event="click:buildPlan">
+                            <i data-lucide="magic-wand" class="w-6 h-6"></i>
+                            Build My Safe Plan
+                            <!-- TODO: Trigger confetti animation on click -->
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: PlannerSection -->
+
+    <!-- @COMPONENT: ExploreSection -->
+    <!-- [4] EXPLORE PORT SAID - Curated Suggestions -->
+    <section class="py-20 bg-background">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="font-jakarta font-bold text-4xl lg:text-5xl mb-6 text-foreground">
+                    Curated for You: <span class="text-gradient">Port Said's Best</span>
+                </h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                    Dive into Port Said's vibrant scene with our expert recommendations
+                </p>
+            </div>
+            
+            <!-- Restaurants & Cafés -->
+            <div class="mb-20 scroll-reveal">
+                <div class="flex items-center justify-between mb-8">
+                    <h3 class="font-jakarta font-bold text-3xl text-foreground flex items-center gap-3">
+                        <i data-lucide="utensils" class="w-8 h-8 text-accent-gold"></i>
+                        Restaurants & Cafés
+                    </h3>
+                    <button class="text-primary hover:text-primary-600 font-semibold flex items-center gap-2">
+                        View All <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </button>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Ibn Hamidou -->
+                    <div class="bg-card hover-lift rounded-2xl overflow-hidden shadow-lg border border-border">
+                        <!-- Fresh seafood platter with Egyptian spices and garnishes -->
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" alt="Traditional Egyptian seafood at Ibn Hamidou" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-3">
+                                <h4 class="font-jakarta font-bold text-xl text-card-foreground">Ibn Hamidou</h4>
+                                <div class="flex items-center gap-1">
+                                    <i data-lucide="star" class="w-4 h-4 text-accent-gold fill-current"></i>
+                                    <span class="text-sm font-semibold">4.8</span>
+                                </div>
+                            </div>
+                            <p class="text-muted-foreground text-sm mb-4">Traditional seafood restaurant</p>
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="px-2 py-1 bg-accent-gold bg-opacity-20 text-accent-gold text-xs font-semibold rounded-full">Editor's Pick</span>
+                                <span class="px-2 py-1 bg-accent-teal bg-opacity-20 text-accent-teal text-xs font-semibold rounded-full">New</span>
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="flex-1 border border-border hover:bg-secondary text-foreground py-2 px-4 rounded-lg font-medium text-sm transition-colors">
+                                    View Menu
+                                </button>
+                                <button class="flex-1 gradient-primary text-white py-2 px-4 rounded-lg font-medium text-sm transition-all hover-lift">
+                                    Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- El Borg -->
+                    <div class="bg-card hover-lift rounded-2xl overflow-hidden shadow-lg border border-border">
+                        <!-- Mediterranean seafood restaurant interior with ocean views -->
+                        <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" alt="El Borg seafood restaurant dining area" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-3">
+                                <h4 class="font-jakarta font-bold text-xl text-card-foreground">El Borg</h4>
+                                <div class="flex items-center gap-1">
+                                    <i data-lucide="star" class="w-4 h-4 text-accent-gold fill-current"></i>
+                                    <span class="text-sm font-semibold">4.6</span>
+                                </div>
+                            </div>
+                            <p class="text-muted-foreground text-sm mb-4">Mediterranean seafood specialties</p>
+                            <div class="flex gap-2">
+                                <button class="flex-1 border border-border hover:bg-secondary text-foreground py-2 px-4 rounded-lg font-medium text-sm transition-colors">
+                                    View Menu
+                                </button>
+                                <button class="flex-1 gradient-primary text-white py-2 px-4 rounded-lg font-medium text-sm transition-all hover-lift">
+                                    Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bianca Cafe -->
+                    <div class="bg-card hover-lift rounded-2xl overflow-hidden shadow-lg border border-border">
+                        <!-- Modern cafe interior with Egyptian coffee and pastries -->
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" alt="Bianca Cafe modern interior and coffee setup" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-3">
+                                <h4 class="font-jakarta font-bold text-xl text-card-foreground">Bianca Cafe</h4>
+                                <div class="flex items-center gap-1">
+                                    <i data-lucide="star" class="w-4 h-4 text-accent-gold fill-current"></i>
+                                    <span class="text-sm font-semibold">4.9</span>
+                                </div>
+                            </div>
+                            <p class="text-muted-foreground text-sm mb-4">Premium coffee & pastries</p>
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="px-2 py-1 bg-accent-lilac bg-opacity-20 text-accent-lilac text-xs font-semibold rounded-full">Popular</span>
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="flex-1 border border-border hover:bg-secondary text-foreground py-2 px-4 rounded-lg font-medium text-sm transition-colors">
+                                    View Menu
+                                </button>
+                                <button class="flex-1 gradient-primary text-white py-2 px-4 rounded-lg font-medium text-sm transition-all hover-lift">
+                                    Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- City Crepe -->
+                    <div class="bg-card hover-lift rounded-2xl overflow-hidden shadow-lg border border-border">
+                        <!-- French crepe restaurant with Egyptian fusion dishes -->
+                        <img src="https://images.unsplash.com/photo-1506459225024-1428097a7e18?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" alt="City Crepe restaurant with delicious crepes" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-3">
+                                <h4 class="font-jakarta font-bold text-xl text-card-foreground">City Crepe</h4>
+                                <div class="flex items-center gap-1">
+                                    <i data-lucide="star" class="w-4 h-4 text-accent-gold fill-current"></i>
+                                    <span class="text-sm font-semibold">4.7</span>
+                                </div>
+                            </div>
+                            <p class="text-muted-foreground text-sm mb-4">French crepes with local twist</p>
+                            <div class="flex gap-2">
+                                <button class="flex-1 border border-border hover:bg-secondary text-foreground py-2 px-4 rounded-lg font-medium text-sm transition-colors">
+                                    View Menu
+                                </button>
+                                <button class="flex-1 gradient-primary text-white py-2 px-4 rounded-lg font-medium text-sm transition-all hover-lift">
+                                    Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Shopping & Local Finds -->
+            <div class="mb-20 scroll-reveal">
+                <div class="flex items-center justify-between mb-8">
+                    <h3 class="font-jakarta font-bold text-3xl text-white flex items-center gap-3">
+                        <i data-lucide="shopping-bag" class="w-8 h-8 text-accent-lilac"></i>
+                        Shopping & Local Finds
+                    </h3>
+                    <button class="text-accent-teal hover:text-accent-lilac font-semibold flex items-center gap-2">
+                        Discover Stores <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </button>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Golden Zone Mall -->
+                    <div class="bg-white bg-opacity-10 hover-lift rounded-2xl p-6 backdrop-blur-sm border border-white border-opacity-20">
+                        <div class="mb-4">
+                            <i data-lucide="building" class="w-12 h-12 text-accent-gold mb-3"></i>
+                            <h4 class="font-jakarta font-bold text-xl text-white">Golden Zone</h4>
+                            <p class="text-gray-200 text-sm">Premium shopping mall</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="px-2 py-1 bg-accent-gold bg-opacity-30 text-accent-gold text-xs font-semibold rounded-full">Luxury</span>
+                            <span class="px-2 py-1 bg-accent-teal bg-opacity-30 text-accent-teal text-xs font-semibold rounded-full">20% Off</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Abu Alaa Active -->
+                    <div class="bg-white bg-opacity-10 hover-lift rounded-2xl p-6 backdrop-blur-sm border border-white border-opacity-20">
+                        <div class="mb-4">
+                            <i data-lucide="shirt" class="w-12 h-12 text-accent-lilac mb-3"></i>
+                            <h4 class="font-jakarta font-bold text-xl text-white">Abu Alaa Active</h4>
+                            <p class="text-gray-200 text-sm">Local fashion brand</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="px-2 py-1 bg-accent-lilac bg-opacity-30 text-accent-lilac text-xs font-semibold rounded-full">Trending</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Top Jeans -->
+                    <div class="bg-white bg-opacity-10 hover-lift rounded-2xl p-6 backdrop-blur-sm border border-white border-opacity-20">
+                        <div class="mb-4">
+                            <i data-lucide="crown" class="w-12 h-12 text-accent-pink mb-3"></i>
+                            <h4 class="font-jakarta font-bold text-xl text-white">Top Jeans</h4>
+                            <p class="text-gray-200 text-sm">Local denim specialist</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="px-2 py-1 bg-accent-pink bg-opacity-30 text-accent-pink text-xs font-semibold rounded-full">Local Brand</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Landmarks & Activities -->
+            <div class="scroll-reveal">
+                <div class="flex items-center justify-between mb-8">
+                    <h3 class="font-jakarta font-bold text-3xl text-white flex items-center gap-3">
+                        <i data-lucide="landmark" class="w-8 h-8 text-accent-teal"></i>
+                        Landmarks & Activities
+                    </h3>
+                    <button class="text-accent-teal hover:text-accent-lilac font-semibold flex items-center gap-2">
+                        Learn More <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </button>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Suez Canal Viewpoint -->
+                    <div class="bg-white bg-opacity-10 hover-lift rounded-2xl overflow-hidden backdrop-blur-sm border border-white border-opacity-20">
+                        <!-- Suez Canal ships passing through the waterway with historic buildings -->
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200" alt="Suez Canal viewpoint with ships" class="w-full h-32 object-cover">
+                        <div class="p-6">
+                            <h4 class="font-jakarta font-bold text-xl text-white mb-2">Suez Canal Viewpoint</h4>
+                            <p class="text-gray-200 text-sm mb-3">Witness maritime history in action</p>
+                            <div class="flex items-center gap-2">
+                                <span class="px-2 py-1 bg-accent-gold bg-opacity-30 text-accent-gold text-xs font-semibold rounded-full">Must See</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Ferial Park -->
+                    <div class="bg-white bg-opacity-10 hover-lift rounded-2xl overflow-hidden backdrop-blur-sm border border-white border-opacity-20">
+                        <!-- Family-friendly park with green spaces and recreational areas -->
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200" alt="Ferial Park green spaces and family areas" class="w-full h-32 object-cover">
+                        <div class="p-6">
+                            <h4 class="font-jakarta font-bold text-xl text-white mb-2">Ferial Park</h4>
+                            <p class="text-gray-200 text-sm mb-3">Perfect for family outings</p>
+                            <div class="flex items-center gap-2">
+                                <span class="px-2 py-1 bg-accent-pink bg-opacity-30 text-accent-pink text-xs font-semibold rounded-full">Family Friendly</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Military Museum -->
+                    <div class="bg-white bg-opacity-10 hover-lift rounded-2xl overflow-hidden backdrop-blur-sm border border-white border-opacity-20">
+                        <!-- Historic military museum exterior with Egyptian architecture -->
+                        <img src="https://pixabay.com/get/g7680c983a088267cd35e455b66c3b4de177523b9cc569419c465006b62b9dc52d7944ad863f9bd0dae731074227ddc777d79a064506301088b18cb2c3e139f99_1280.jpg" alt="Military Museum historical exhibits" class="w-full h-32 object-cover">
+                        <div class="p-6">
+                            <h4 class="font-jakarta font-bold text-xl text-white mb-2">Military Museum</h4>
+                            <p class="text-gray-200 text-sm mb-3">Rich Egyptian military heritage</p>
+                            <div class="flex items-center gap-2">
+                                <span class="px-2 py-1 bg-accent-lilac bg-opacity-30 text-accent-lilac text-xs font-semibold rounded-full">Cultural</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ExploreSection -->
+
+    <!-- @COMPONENT: PackagesSection -->
+    <!-- [5] FEATURED PACKAGES - Your Journey, Your Way -->
+    <section class="py-20 bg-secondary">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="font-jakarta font-bold text-4xl lg:text-5xl mb-6 text-foreground">
+                    <span class="text-gradient">Your Journey</span>, Your Way
+                </h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                    Choose from our carefully crafted packages designed for every traveler
+                </p>
+            </div>
+            
+            <!-- View Toggle -->
+            <div class="flex justify-center mb-12 scroll-reveal">
+                <div class="bg-card rounded-xl p-2 shadow-lg border border-border">
+                    <div class="flex">
+                        <button class="px-6 py-2 rounded-lg gradient-primary text-white font-medium transition-all">
+                            <i data-lucide="grid-3x3" class="w-4 h-4 inline mr-2"></i>
+                            Cards View
+                        </button>
+                        <button class="px-6 py-2 rounded-lg text-muted-foreground hover:text-foreground font-medium transition-colors">
+                            <i data-lucide="list" class="w-4 h-4 inline mr-2"></i>
+                            Compare
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Packages Grid -->
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+                <!-- VIP Voyager -->
+                <div class="scroll-reveal bg-card hover-lift rounded-2xl overflow-hidden shadow-xl border-2 border-accent-gold relative">
+                    <div class="absolute top-0 left-0 right-0 h-1 bg-accent-gold"></div>
+                    <div class="absolute top-4 right-4 z-10">
+                        <span class="px-3 py-1 bg-accent-gold text-white text-xs font-bold rounded-full">Most Popular</span>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center">
+                                <i data-lucide="crown" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-jakarta font-bold text-2xl text-card-foreground">VIP Voyager</h3>
+                                <p class="text-muted-foreground text-sm">Ultimate luxury experience</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="flex items-baseline gap-2 mb-2">
+                                <span class="text-3xl font-bold text-card-foreground">450</span>
+                                <span class="text-lg text-muted-foreground">EGP</span>
+                                <span class="text-sm text-muted-foreground">per person</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Inclusions -->
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center gap-3 text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-accent-teal"></i>
+                                <span>Premium hotel accommodation</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-accent-teal"></i>
+                                <span>VIP restaurant reservations</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-accent-teal"></i>
+                                <span>Private guided tours</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm">
+                                <i data-lucide="shield" class="w-4 h-4 text-accent-gold"></i>
+                                <span class="font-semibold">Premium safety coverage</span>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full gradient-primary text-white py-3 px-6 rounded-xl font-semibold transition-all hover-lift shadow-lg">
+                            Choose VIP Experience
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Adventurer -->
+                <div class="scroll-reveal bg-card hover-lift rounded-2xl overflow-hidden shadow-lg border border-border relative" style="animation-delay: 0.1s;">
+                    <div class="absolute top-4 right-4 z-10">
+                        <span class="px-3 py-1 bg-accent-teal text-white text-xs font-bold rounded-full">Best Value</span>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center">
+                                <i data-lucide="compass" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-jakarta font-bold text-2xl text-card-foreground">Adventurer</h3>
+                                <p class="text-muted-foreground text-sm">Perfect balance of comfort & exploration</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="flex items-baseline gap-2 mb-2">
+                                <span class="text-3xl font-bold text-card-foreground">250</span>
+                                <span class="text-lg text-muted-foreground">EGP</span>
+                                <span class="text-sm text-muted-foreground">per person</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Inclusions -->
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center gap-3 text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-accent-teal"></i>
+                                <span>3-star hotel booking</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-accent-teal"></i>
+                                <span>Restaurant recommendations</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-accent-teal"></i>
+                                <span>Interactive maps & guides</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm">
+                                <i data-lucide="shield" class="w-4 h-4 text-accent-gold"></i>
+                                <span class="font-semibold">Standard safety coverage</span>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full gradient-primary text-white py-3 px-6 rounded-xl font-semibold transition-all hover-lift shadow-lg">
+                            Start Adventure
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Explorer -->
+                <div class="scroll-reveal bg-card hover-lift rounded-2xl overflow-hidden shadow-lg border border-border" style="animation-delay: 0.2s;">
+                    <div class="p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center">
+                                <i data-lucide="map" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-jakarta font-bold text-2xl text-card-foreground">Explorer</h3>
+                                <p class="text-muted-foreground text-sm">Budget-friendly discovery</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="flex items-baseline gap-2 mb-2">
+                                <span class="text-3xl font-bold text-card-foreground">200</span>
+                                <span class="text-lg text-muted-foreground">EGP</span>
+                                <span class="text-sm text-muted-foreground">per person</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Inclusions -->
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center gap-3 text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-accent-teal"></i>
+                                <span>City maps & directions</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-accent-teal"></i>
+                                <span>Budget dining suggestions</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-accent-teal"></i>
+                                <span>Transport assistance</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm">
+                                <i data-lucide="shield" class="w-4 h-4 text-accent-gold"></i>
+                                <span class="font-semibold">Basic safety coverage</span>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white py-3 px-6 rounded-xl font-semibold transition-all hover-lift">
+                            Start Exploring
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Alex Day Trip -->
+                <div class="scroll-reveal bg-card hover-lift rounded-2xl overflow-hidden shadow-lg border border-border" style="animation-delay: 0.3s;">
+                    <div class="p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center">
+                                <i data-lucide="car" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-jakarta font-bold text-2xl text-card-foreground">Alex Day Trip</h3>
+                                <p class="text-muted-foreground text-sm">Alexandria adventure package</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="flex items-baseline gap-2 mb-2">
+                                <span class="text-3xl font-bold text-card-foreground">399</span>
+                                <span class="text-lg text-muted-foreground">EGP</span>
+                                <span class="text-sm text-muted-foreground">per person</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Inclusions -->
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center gap-3 text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-accent-teal"></i>
+                                <span>Round-trip transportation</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-accent-teal"></i>
+                                <span>Alexandria city tour</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-accent-teal"></i>
+                                <span>Lunch included</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm">
+                                <i data-lucide="shield" class="w-4 h-4 text-accent-gold"></i>
+                                <span class="font-semibold">Travel insurance included</span>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white py-3 px-6 rounded-xl font-semibold transition-all hover-lift">
+                            Book Day Trip
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: PackagesSection -->
+
+    <!-- @COMPONENT: TestimonialsSection -->
+    <!-- [6] TESTIMONIALS - Voices of Our Travelers -->
+    <section class="py-20 bg-gradient-to-br from-primary-700 to-primary-500 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <div style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"dots\" width=\"20\" height=\"20\" patternUnits=\"userSpaceOnUse\"><circle cx=\"10\" cy=\"10\" r=\"1\" fill=\"white\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23dots)\"/></svg>'); background-size: 50px 50px;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="font-jakarta font-bold text-4xl lg:text-5xl mb-6 text-white">
+                    Voices of Our <span class="text-accent-teal">Travelers</span>
+                </h2>
+                <p class="text-xl text-gray-200 max-w-3xl mx-auto">
+                    Real experiences from travelers who discovered Port Said with us
+                </p>
+            </div>
+            
+            <!-- Testimonials Carousel -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- @MAP: testimonials.map(testimonial => ( -->
+                <!-- Testimonial 1 -->
+                <div class="scroll-reveal glass-card hover-lift rounded-2xl p-8 text-center shadow-2xl" style="animation-delay: 0s;">
+                    <div class="mb-6">
+                        <!-- Happy young tourist at Port Said waterfront -->
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" alt="Happy traveler testimonial" class="w-20 h-20 rounded-full mx-auto border-4 border-accent-gold object-cover">
+                        <div class="flex justify-center mt-3">
+                            <span class="w-6 h-4 rounded-sm bg-red-500"></span>
+                            <span class="w-6 h-4 rounded-sm bg-white -ml-1"></span>
+                            <span class="w-6 h-4 rounded-sm bg-black -ml-1"></span>
+                        </div>
+                    </div>
+                    <blockquote class="text-white mb-4 text-lg leading-relaxed">
+                        "Egy Safary made our Port Said trip absolutely magical. Every recommendation was perfect!"
+                    </blockquote>
+                    <footer class="text-gray-300">
+                        <div class="font-semibold">Ahmed Hassan</div>
+                        <div class="text-sm flex items-center justify-center gap-1 mt-1">
+                            <span>Cairo, Egypt</span>
+                            <span class="inline-flex items-center gap-1 px-2 py-1 bg-accent-teal bg-opacity-30 text-accent-teal text-xs rounded-full">
+                                <i data-lucide="check-circle" class="w-3 h-3"></i>
+                                Verified Trip
+                            </span>
+                        </div>
+                    </footer>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="scroll-reveal glass-card hover-lift rounded-2xl p-8 text-center shadow-2xl" style="animation-delay: 0.1s;">
+                    <div class="mb-6">
+                        <!-- International female traveler enjoying Egyptian cuisine -->
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" alt="International traveler testimonial" class="w-20 h-20 rounded-full mx-auto border-4 border-accent-gold object-cover">
+                        <div class="flex justify-center mt-3">
+                            <span class="w-6 h-4 rounded-sm bg-blue-500"></span>
+                            <span class="w-6 h-4 rounded-sm bg-white -ml-1"></span>
+                            <span class="w-6 h-4 rounded-sm bg-red-500 -ml-1"></span>
+                        </div>
+                    </div>
+                    <blockquote class="text-white mb-4 text-lg leading-relaxed">
+                        "The safety features gave me confidence to explore. Highly recommended platform!"
+                    </blockquote>
+                    <footer class="text-gray-300">
+                        <div class="font-semibold">Marie Dubois</div>
+                        <div class="text-sm flex items-center justify-center gap-1 mt-1">
+                            <span>Paris, France</span>
+                            <span class="inline-flex items-center gap-1 px-2 py-1 bg-accent-teal bg-opacity-30 text-accent-teal text-xs rounded-full">
+                                <i data-lucide="check-circle" class="w-3 h-3"></i>
+                                Verified Trip
+                            </span>
+                        </div>
+                    </footer>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="scroll-reveal glass-card hover-lift rounded-2xl p-8 text-center shadow-2xl" style="animation-delay: 0.2s;">
+                    <div class="mb-6">
+                        <!-- Family travelers enjoying Port Said attractions -->
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" alt="Family traveler testimonial" class="w-20 h-20 rounded-full mx-auto border-4 border-accent-gold object-cover">
+                        <div class="flex justify-center mt-3">
+                            <span class="w-6 h-4 rounded-sm bg-green-500"></span>
+                            <span class="w-6 h-4 rounded-sm bg-white -ml-1"></span>
+                            <span class="w-6 h-4 rounded-sm bg-red-500 -ml-1"></span>
+                        </div>
+                    </div>
+                    <blockquote class="text-white mb-4 text-lg leading-relaxed">
+                        "Amazing local partners and authentic experiences. Our family loved every moment!"
+                    </blockquote>
+                    <footer class="text-gray-300">
+                        <div class="font-semibold">Omar Al-Rashid</div>
+                        <div class="text-sm flex items-center justify-center gap-1 mt-1">
+                            <span>Dubai, UAE</span>
+                            <span class="inline-flex items-center gap-1 px-2 py-1 bg-accent-teal bg-opacity-30 text-accent-teal text-xs rounded-full">
+                                <i data-lucide="check-circle" class="w-3 h-3"></i>
+                                Verified Trip
+                            </span>
+                        </div>
+                    </footer>
+                </div>
+                <!-- @END_MAP )) -->
+            </div>
+            
+            <!-- Carousel Navigation -->
+            <div class="flex justify-center mt-12 gap-4">
+                <button class="w-12 h-12 glass-card rounded-full flex items-center justify-center text-white hover-lift">
+                    <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                </button>
+                <button class="w-12 h-12 glass-card rounded-full flex items-center justify-center text-white hover-lift">
+                    <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: TestimonialsSection -->
+
+    <!-- @COMPONENT: AdsSection -->
+    <!-- [7] EXCLUSIVE OFFERS - Premium Partner Deals -->
+    <section class="py-20 bg-background">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="font-jakarta font-bold text-4xl lg:text-5xl mb-6 text-foreground">
+                    <span class="text-gradient">Exclusive Offers</span>
+                </h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                    Limited-time deals from our premium partners
+                </p>
+            </div>
+            
+            <!-- Offers Grid -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Hotel Stay Discount -->
+                <div class="scroll-reveal bg-card hover-lift rounded-2xl overflow-hidden shadow-lg border-2 border-accent-gold border-opacity-30 relative">
+                    <div class="absolute top-4 left-4 z-10">
+                        <span class="px-3 py-1 bg-accent-gold text-white text-xs font-bold rounded-full">Sponsored</span>
+                    </div>
+                    <!-- Luxury hotel room in Port Said with modern amenities -->
+                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200" alt="Premium hotel room offer" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-jakarta font-bold text-2xl mb-3 text-card-foreground">Hotel Stay 20% Off</h3>
+                        <p class="text-muted-foreground mb-4">Book premium accommodations at Panorama Hotel with exclusive discounts</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-accent-gold">20% OFF</span>
+                            <button class="gradient-primary text-white py-2 px-6 rounded-lg font-semibold transition-all hover-lift">
+                                Claim Offer
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Local Crafts Discount -->
+                <div class="scroll-reveal bg-card hover-lift rounded-2xl overflow-hidden shadow-lg border-2 border-accent-teal border-opacity-30 relative" style="animation-delay: 0.1s;">
+                    <div class="absolute top-4 left-4 z-10">
+                        <span class="px-3 py-1 bg-accent-teal text-white text-xs font-bold rounded-full">Sponsored</span>
+                    </div>
+                    <!-- Traditional Egyptian crafts and souvenirs display -->
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200" alt="Local crafts and souvenirs" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-jakarta font-bold text-2xl mb-3 text-card-foreground">Crafts Discount</h3>
+                        <p class="text-muted-foreground mb-4">Authentic Port Said handicrafts and souvenirs with special pricing</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-accent-teal">15% OFF</span>
+                            <button class="gradient-primary text-white py-2 px-6 rounded-lg font-semibold transition-all hover-lift">
+                                Shop Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Seafood Feast Tonight -->
+                <div class="scroll-reveal bg-card hover-lift rounded-2xl overflow-hidden shadow-lg border-2 border-accent-pink border-opacity-30 relative" style="animation-delay: 0.2s;">
+                    <div class="absolute top-4 left-4 z-10">
+                        <span class="px-3 py-1 bg-accent-pink text-white text-xs font-bold rounded-full">Sponsored</span>
+                    </div>
+                    <!-- Fresh seafood dinner spread with Mediterranean presentation -->
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200" alt="Seafood feast dinner special" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-jakarta font-bold text-2xl mb-3 text-card-foreground">Seafood Feast Tonight</h3>
+                        <p class="text-muted-foreground mb-4">Special dinner menu at Asmak City with fresh daily catch</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-accent-pink">Tonight Only</span>
+                            <button class="gradient-primary text-white py-2 px-6 rounded-lg font-semibold transition-all hover-lift">
+                                Reserve Table
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: AdsSection -->
+
+    <!-- @COMPONENT: PartnersSection -->
+    <!-- [8] PARTNER STRIP - Trusted By -->
+    <section class="py-16 bg-card border-t border-border">
+        <div class="container mx-auto px-6">
+            <!-- Header -->
+            <div class="text-center mb-12 scroll-reveal">
+                <h3 class="font-jakarta font-bold text-2xl text-card-foreground mb-2">Trusted by 30+ Verified Partners</h3>
+                <p class="text-muted-foreground">Working with Port Said's finest establishments</p>
+            </div>
+            
+            <!-- Partners Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-center">
+                <!-- Partner Logos (Mock) -->
+                <div class="scroll-reveal flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300 hover-lift" style="animation-delay: 0s;">
+                    <div class="text-center">
+                        <i data-lucide="building" class="w-8 h-8 text-muted-foreground mx-auto mb-2"></i>
+                        <span class="text-xs text-muted-foreground font-medium">Panorama Hotel</span>
+                    </div>
+                </div>
+                <div class="scroll-reveal flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300 hover-lift" style="animation-delay: 0.1s;">
+                    <div class="text-center">
+                        <i data-lucide="utensils" class="w-8 h-8 text-muted-foreground mx-auto mb-2"></i>
+                        <span class="text-xs text-muted-foreground font-medium">Ibn Hamidou</span>
+                    </div>
+                </div>
+                <div class="scroll-reveal flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300 hover-lift" style="animation-delay: 0.2s;">
+                    <div class="text-center">
+                        <i data-lucide="coffee" class="w-8 h-8 text-muted-foreground mx-auto mb-2"></i>
+                        <span class="text-xs text-muted-foreground font-medium">Bianca Cafe</span>
+                    </div>
+                </div>
+                <div class="scroll-reveal flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300 hover-lift" style="animation-delay: 0.3s;">
+                    <div class="text-center">
+                        <i data-lucide="shopping-cart" class="w-8 h-8 text-muted-foreground mx-auto mb-2"></i>
+                        <span class="text-xs text-muted-foreground font-medium">Golden Zone</span>
+                    </div>
+                </div>
+                <div class="scroll-reveal flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300 hover-lift" style="animation-delay: 0.4s;">
+                    <div class="text-center">
+                        <i data-lucide="shirt" class="w-8 h-8 text-muted-foreground mx-auto mb-2"></i>
+                        <span class="text-xs text-muted-foreground font-medium">Abu Alaa Active</span>
+                    </div>
+                </div>
+                <div class="scroll-reveal flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300 hover-lift" style="animation-delay: 0.5s;">
+                    <div class="text-center">
+                        <i data-lucide="anchor" class="w-8 h-8 text-muted-foreground mx-auto mb-2"></i>
+                        <span class="text-xs text-muted-foreground font-medium">Port Authority</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Final CTA -->
+            <div class="text-center mt-16 scroll-reveal">
+                <button class="gradient-primary hover-lift px-10 py-4 rounded-xl text-white font-bold text-lg transition-all duration-150 shadow-lg flex items-center gap-3 mx-auto">
+                    <i data-lucide="rocket" class="w-6 h-6"></i>
+                    Start Your Port Said Adventure
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: PartnersSection -->
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Scroll reveal animation
+        (function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('revealed');
+                        }, index * 60); // Stagger effect
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all scroll-reveal elements
+            document.querySelectorAll('.scroll-reveal').forEach(el => {
+                observer.observe(el);
+            });
+        })();
+
+        // Progress bar animation for planner
+        // TODO: Implement real step progression logic
+        function updatePlannerProgress(step) {
+            const progressBar = document.querySelector('.bg-accent-teal');
+            const percentages = [33, 66, 100];
+            const stepTexts = ['Step 1 of 3', 'Step 2 of 3', 'Step 3 of 3'];
+            
+            if (progressBar && step >= 1 && step <= 3) {
+                progressBar.style.width = percentages[step - 1] + '%';
+            }
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mock interaction handlers
+        // TODO: Replace with real business logic
+        document.querySelectorAll('[data-event]').forEach(element => {
+            const [eventType, handlerName] = element.getAttribute('data-event').split(':');
+            element.addEventListener(eventType, function() {
+                console.log(`Handler: ${handlerName} - Element:`, this);
+                // TODO: Implement actual event handling logic
+                if (handlerName === 'buildPlan') {
+                    // TODO: Show confetti animation
+                    console.log('Building plan...');
+                }
+            });
+        });
+
+        // Responsive navigation handling
+        function handleResponsiveChanges() {
+            const isMobile = window.innerWidth < 768;
+            
+            // Adjust hero text size on mobile
+            const heroTitle = document.querySelector('h1');
+            if (heroTitle) {
+                if (isMobile) {
+                    heroTitle.classList.remove('lg:text-7xl', 'md:text-6xl');
+                    heroTitle.classList.add('text-4xl');
+                } else {
+                    heroTitle.classList.add('lg:text-7xl', 'md:text-6xl');
+                    heroTitle.classList.remove('text-4xl');
+                }
+            }
+            
+            // Stack CTAs on mobile
+            const ctaContainer = document.querySelector('.scroll-reveal .flex');
+            if (ctaContainer) {
+                if (isMobile) {
+                    ctaContainer.classList.add('flex-col');
+                    ctaContainer.classList.remove('sm:flex-row');
+                } else {
+                    ctaContainer.classList.remove('flex-col');
+                    ctaContainer.classList.add('sm:flex-row');
+                }
+            }
+        }
+
+        // Listen for window resize
+        window.addEventListener('resize', handleResponsiveChanges);
+        handleResponsiveChanges(); // Initial call
+
+        // Parallax effect for hero section (reduced motion safe)
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const hero = document.querySelector('section');
+                if (hero) {
+                    hero.style.transform = `translateY(${scrolled * 0.2}px)`;
+                }
+            });
+        }
+    </script>
+</body>
+</html>
