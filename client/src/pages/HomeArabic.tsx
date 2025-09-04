@@ -2,13 +2,13 @@ import { useEffect } from "react";
 import { Link } from "wouter";
 import { Globe } from "lucide-react";
 import HeroSectionArabic from "@/components/HeroSectionArabic";
-import WhyEgySafary from "@/components/WhyEgySafary";
-import PlannerSection from "@/components/PlannerSection";
+import WhyEgySafaryArabic from "@/components/WhyEgySafaryArabic";
+import PlannerSectionArabic from "@/components/PlannerSectionArabic";
 import ExploreArabic from "@/components/ExploreArabic";
-import PackagesSection from "@/components/PackagesSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import AdsSection from "@/components/AdsSection";
-import PartnersSection from "@/components/PartnersSection";
+import PackagesSectionArabic from "@/components/PackagesSectionArabic";
+import TestimonialsSectionArabic from "@/components/TestimonialsSectionArabic";
+import AdsSectionArabic from "@/components/AdsSectionArabic";
+import PartnersSectionArabic from "@/components/PartnersSectionArabic";
 
 export default function HomeArabic() {
   useEffect(() => {
@@ -51,13 +51,13 @@ export default function HomeArabic() {
       </div>
       
       <HeroSectionArabic />
-      <WhyEgySafary />
-      <PlannerSection />
+      <WhyEgySafaryArabic />
+      <PlannerSectionArabic />
       <ExploreArabic />
-      <PackagesSection />
-      <TestimonialsSection />
-      <AdsSection />
-      <PartnersSection />
+      <PackagesSectionArabic />
+      <TestimonialsSectionArabic />
+      <AdsSectionArabic />
+      <PartnersSectionArabic />
     </div>
   );
 }
