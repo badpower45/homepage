@@ -1,37 +1,48 @@
 export default function AdsSection() {
   const offers = [
     {
-      title: "Hotel Stay 20% Off",
-      description: "Book premium accommodations at Panorama Hotel with exclusive discounts",
-      discount: "20% OFF",
-      image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
-      ctaText: "Claim Offer",
+      title: "Diamond Blue Hotel",
+      description: "Luxury stay with exclusive amenities and waterfront views",
+      discount: "25% OFF",
+      image: "https://i.postimg.cc/vBRkP4gX/455348224-122100092078476219-671852229544513773-n.jpg",
+      ctaText: "Book Now",
       borderColor: "border-accent-gold",
       badgeColor: "bg-accent-gold",
       discountColor: "text-accent-gold",
       delay: "0s"
     },
     {
-      title: "Crafts Discount",
-      description: "Authentic Port Said handicrafts and souvenirs with special pricing",
-      discount: "15% OFF",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
-      ctaText: "Shop Now",
+      title: "El Nours Village",
+      description: "Peaceful retreat with authentic Egyptian hospitality",
+      discount: "20% OFF",
+      image: "https://i.postimg.cc/kXn33Rjp/326774877-1511605362667077-7649389515364575669-n.jpg",
+      ctaText: "Reserve",
       borderColor: "border-accent-teal",
       badgeColor: "bg-accent-teal",
       discountColor: "text-accent-teal",
       delay: "0.1s"
     },
     {
-      title: "Seafood Feast Tonight",
-      description: "Special dinner menu at Ibn Hamidou with fresh daily catch",
-      discount: "Tonight Only",
-      image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
-      ctaText: "Reserve Table",
+      title: "Grand Hotel",
+      description: "Premium accommodations in the heart of Port Said",
+      discount: "15% OFF",
+      image: "https://i.postimg.cc/JzZbNt8R/484029555-122153777804476219-4437031621081582764-n.jpg",
+      ctaText: "Book Stay",
       borderColor: "border-accent-pink",
       badgeColor: "bg-accent-pink",
       discountColor: "text-accent-pink",
       delay: "0.2s"
+    },
+    {
+      title: "🤖 NEW: AI Travel Assistant",
+      description: "Get personalized recommendations with our smart AI guide - launching soon!",
+      discount: "Coming Soon",
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+      ctaText: "Join Waitlist",
+      borderColor: "border-accent-lilac",
+      badgeColor: "bg-accent-lilac",
+      discountColor: "text-accent-lilac",
+      delay: "0.3s"
     }
   ];
 
@@ -49,7 +60,7 @@ export default function AdsSection() {
         </div>
         
         {/* Offers Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {offers.map((offer, index) => (
             <div 
               key={index}

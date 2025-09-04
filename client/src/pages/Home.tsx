@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { Link } from "wouter";
+import { Globe } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import WhyEgySafary from "@/components/WhyEgySafary";
 import PlannerSection from "@/components/PlannerSection";
@@ -38,6 +40,16 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+      {/* Language Switcher */}
+      <div className="fixed top-6 right-6 z-50">
+        <Link href="/ar">
+          <button className="glass-card px-4 py-2 rounded-full text-white hover-lift flex items-center gap-2" data-testid="button-switch-arabic">
+            <Globe className="w-4 h-4" />
+            العربية
+          </button>
+        </Link>
+      </div>
+      
       <HeroSection />
       <WhyEgySafary />
       <PlannerSection />
